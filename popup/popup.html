@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html >
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>DID Auth Popup</title>
+
+		<style>
+			* { font-family: sans; }
+			h1 { font-size: 16pt; }
+			body { margin: 30px; }
+			table { width: 100%; }
+			tr { width: 100%; }
+			td { font-family: monospace; }
+			input { width: 100%; font-family: monospace; }
+		</style>
+
+		<script src="popup.js" type="text/javascript"></script>
+
+	</head>
+	
+	<body>
+
+		<img src="/icons/did-auth-icon.png" align="right">
+
+		<h1>Your DIDs and Private Keys</h1>
+		<table width="100%">
+			<tr>
+				<td><input type="radio" id="did1" name="did" value="1"></td>
+				<td>did:sov:DavnUKB3kjn7VmVZXzEDL7</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding-bottom: 20px"><input type="text" style="width: 100%" value="H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="did2" name="did" value="2"></td>
+				<td>did:btcr:xkrn-xzcr-qqlv-j6sl</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding-bottom: 20px"><input type="text" style="width: 100%" value="024a63c4362772b0fafc51ac02470dae3f8da8a05d90bae9e1ef3f5243180120dd"></td>
+			</tr>
+			<tr>
+				<td><input type="radio" id="did3" name="did" value="2"></td>
+				<td>did:v1:test:nym:3AEJTDMSxDDQpyUftjuoeZ2Bazp4Bswj1ce7FJGybCUu</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" style="width: 100%" value="3AEJTDMSxDDQpyUftjuoeZ2Bazp4Bswj1ce7FJGybCUu"></td>
+			</tr>
+		</table>
+		<h1>Your Verifiable Credentials</h1>
+		<table>
+			<tr>
+				<td><input type="checkbox" id="vc1" name="management"></td>
+				<td>Management for Org did:sov:1234567890</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding-bottom: 20px"><input type="text" style="width: 100%" value='{	"type": ["Credential"],	"issuer": "did:sov:0000000000",	"issued": "2010-01-01",	"claim": {		"id": "did:sov:1234567890",		"management": "did:sov:DavnUKB3kjn7VmVZXzEDL7"	},	"proof": {		"type": "Ed25519Signature2018",		"created": "2018-01-01T21:19:10Z",		"creator": "did:sov:0000000000#keys-1",		"nonce": "...",		"signatureValue": "..."	}}'></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" id="vc2" name="delegate"></td>
+				<td>Delegate for Org did:sov:1234567890</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" style="width: 100%" value='{	"type": ["Credential"],	"issuer": "did:sov:DavnUKB3kjn7VmVZXzEDL7",	"issued": "2010-01-01",	"claim": {		"id": "did:sov:1234567890",		"management": "did:v1:test:nym:3AEJTDMSxDDQpyUftjuoeZ2Bazp4Bswj1ce7FJGybCUu"	},	"proof": {		"type": "Ed25519Signature2018",		"created": "2018-01-01T21:19:10Z",		"creator": "did:sov:DavnUKB3kjn7VmVZXzEDL7#keys-1",		"nonce": "c0ae1c8e-c7e7-469f-b252-86e6a0e7387e",		"signatureValue": "..."	}}'></td>
+			</tr>
+		</table>
+
+	</body>
+
+</html>

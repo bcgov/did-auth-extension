@@ -1,0 +1,31 @@
+{
+
+  "description": "Enables authentication and authorization via DIDs and Verifiable Credentials",
+  "manifest_version": 2,
+  "name": "DID Auth",
+  "version": "1.0",
+  "homepage_url": "https://github.com/bcgov/did-auth-extension",
+  "icons": {
+    "48": "icons/did-auth-icon-48.png"
+  },
+
+  "permissions": [
+    "*://*/*",
+    "storage"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/did-auth-icon-48.png",
+    "default_title": "DID Auth",
+    "default_popup": "popup/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": ["alertifyjs/css/alertify.min.css"],
+      "js": ["alertifyjs/alertify.min.js", "didauth.js"]
+    }
+  ]
+
+}
