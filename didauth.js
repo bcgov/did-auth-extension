@@ -44,13 +44,6 @@ window.addEventListener("message", function(event) {
 					swal("Aborted.");
 				}
 			});
-
-			alertify.confirm("DID Auth", text,
-				function() {
-				},
-				function() {
-					alertify.error("Aborted.");
-				});
 		});
 	}
 }, false);
