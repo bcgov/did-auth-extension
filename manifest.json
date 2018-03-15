@@ -23,8 +23,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "css": ["alertifyjs/css/alertify.min.css"],
-      "js": ["alertifyjs/alertify.min.js", "didauth.js"]
+      "js": ["sweetalert/sweetalert.min.js", "didauth.js"]
     }
   ]
 

@@ -17,7 +17,7 @@ This is a WebExtensions-compatible DID Auth browser add-on that supports DID-bas
 
 ## Third-Party Products/Libraries used and the License they are covert by
 
- * [Alertify](http://alertifyjs.com/) - GPLv3
+ * [SweetAlert](https://sweetalert.js.org/) - MIT
 
 ## Project Status
 
